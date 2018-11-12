@@ -1,4 +1,10 @@
+/*
 DROP TABLE secrets;
+ */
+DROP TABLE HunterSecrets;
+DROP TABLE MageSecrets;
+DROP TABLE PaladinSecrets;
+DROP TABLE RogueSecrets;
 
 CREATE TABLE secrets (
   secretName VARCHAR(19),
@@ -7,6 +13,84 @@ CREATE TABLE secrets (
   standard BOOLEAN,
   PRIMARY KEY (secretName)
 );
+
+CREATE TABLE HunterSecrets (
+  secretName VARCHAR(19),
+  standard BOOLEAN,
+  PRIMARY KEY (secretName)
+);
+
+CREATE TABLE MageSecrets (
+  secretName VARCHAR(19),
+  standard BOOLEAN,
+  PRIMARY KEY (secretName)
+);
+
+CREATE TABLE PaladinSecrets (
+  secretName VARCHAR(19),
+  standard BOOLEAN,
+  PRIMARY KEY (secretName)
+);
+
+CREATE TABLE RogueSecrets (
+  secretName VARCHAR(19),
+  standard BOOLEAN,
+  PRIMARY KEY (secretName)
+);
+
+INSERT INTO HunterSecrets(secretName, standard)
+VALUES
+       ('Explosive Trap',   true ),
+       ('Freezing Trap',    true),
+       ('Snipe',            true ),
+       ('Misdirection',     true ),
+       ('Venomstrike Trap', true ),
+       ('Wandering Monster',true ),
+       ('Rat Trap',         true ),
+       ('Snake Trap',       true ),
+       ('Dart Trap',        false ),
+       ('Bear Trap',        false ),
+       ('Cat Trick',        false ),
+       ('Hidden Cache',     false )
+;
+
+INSERT INTO MageSecrets(secretName, standard)
+VALUES
+    ('Frozen Clone',       true ),
+    ('Ice Barrier',        true ),
+    ('Mirror Entity',      true ),
+    ('Counterspell',       true ),
+    ('Explosive Runes',    true ),
+    ('Mana Bind',          true ),
+    ('Vaporize',           true ),
+    ('Spellbender',        true ),
+    ('Duplicate',          false ),
+    ('Effigy',             false ),
+    ('Potion of Polymorph',false ),
+    ('Ice Block',          false )
+;
+
+INSERT INTO PaladinSecrets(secretName, standard)
+VALUES
+       ('Autodefense Matrix', true ),
+       ('Eye for an Eye',     true ),
+       ('Noble Sacrifice',    true ),
+       ('Redemption',         true ),
+       ('Repentance',         true ),
+       ('Hidden Wisdom',      true ),
+       ('Avenge',             false ),
+       ('Sacred Trial',       false ),
+       ('Competitive Spirit', false ),
+       ('Getaway Kodo',       false )
+;
+
+INSERT INTO RogueSecrets(secretName, standard)
+VALUES
+       ('Cheat Death',        false ),
+       ('Sudden Betrayal',    false ),
+       ('Evasion',            false )
+;
+
 
 INSERT INTO secrets(secretName, manaCost, class, standard)
 VALUES
