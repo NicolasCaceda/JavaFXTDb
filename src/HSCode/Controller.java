@@ -31,7 +31,7 @@ public class Controller {
   @FXML
   public Button Jaina = new Button();
   private Image jainaPortrait = new Image("file:Images/Portraits/Jaina.jpg", 65,
-      31, true, true);
+      31, false, true);
 
   @FXML
   public Button Uther;
@@ -99,7 +99,7 @@ public class Controller {
     try {
       Secret.getChildren().clear();
       Secret.getChildren().add(new ImageView(new Image("file:Images/Secrets/"
-          + db.nextCard() + ".png", 200, 200, true, true)));
+          + db.getnextCard() + ".png", 200, 200, true, true)));
 
     } catch (Exception ex) {
       noClassError();
@@ -111,23 +111,25 @@ public class Controller {
     try {
       Secret.getChildren().clear();
       Secret.getChildren().add(new ImageView(new Image("file:Images/Secrets/"
-          + db.prevCard() + ".png", 200, 200, true, true)));
+          + db.getprevCard() + ".png", 200, 200, true, true)));
 
     } catch (Exception ex) {
       noClassError();
     }
   }
 
-  /*
-  @FXML
-  void randomSelection() throws {
-    try{
 
-    }catch{
+  @FXML
+  void randomSelection() throws Exception{
+    try{
+      Secret.getChildren().clear();
+      Secret.getChildren().add(new ImageView(new Image("file:Images/Secrets/"
+          + db.getRandomCard() + ".png", 200, 200, true, true)));
+    }catch(Exception ex){
 
     }
   }
-  */
+
 
   private void noClassError() {
     Secret.getChildren().add(new ImageView(secretImage));

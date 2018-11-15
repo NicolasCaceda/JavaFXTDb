@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Random;
 
 class dbHandler {
 
@@ -20,7 +21,9 @@ class dbHandler {
   private ResultSetMetaData rsetMeta = null;
   private int columnNumber = 0;
   private ArrayList cards = new ArrayList<String>();
+  private ArrayList inStandardrotation = new ArrayList<Boolean>();
   private int cardIterator = 0;
+  Random random = new Random();
 
 
   dbHandler() {
@@ -39,6 +42,7 @@ class dbHandler {
 
   void getHunterSecrets() throws Exception {
     cards.clear();
+    inStandardrotation.clear();
     final String SELECT_QUERY = "SELECT * FROM HUNTERSECRETS";
     stmt = conn.createStatement();
     rset = stmt.executeQuery(SELECT_QUERY);
@@ -47,11 +51,13 @@ class dbHandler {
 
     while (rset.next()) {
       cards.add(rset.getObject(1));
+      inStandardrotation.add(rset.getObject(2));
     }
   }
 
   void getMageSecrets() throws Exception {
     cards.clear();
+    inStandardrotation.clear();
     final String SELECT_QUERY = "SELECT * FROM MAGESECRETS";
     stmt = conn.createStatement();
     rset = stmt.executeQuery(SELECT_QUERY);
@@ -60,12 +66,14 @@ class dbHandler {
 
     while (rset.next()) {
       cards.add(rset.getObject(1));
+      inStandardrotation.add(rset.getObject(2));
     }
 
   }
 
   void getPaladinSecrets() throws Exception {
     cards.clear();
+    inStandardrotation.clear();
     final String SELECT_QUERY = "SELECT * FROM PALADINSECRETS";
     stmt = conn.createStatement();
     rset = stmt.executeQuery(SELECT_QUERY);
@@ -74,12 +82,14 @@ class dbHandler {
 
     while (rset.next()) {
       cards.add(rset.getObject(1));
+      inStandardrotation.add(rset.getObject(2));
     }
 
   }
 
   void getRogueSecrets() throws Exception {
     cards.clear();
+    inStandardrotation.clear();
     final String SELECT_QUERY = "SELECT * FROM ROGUESECRETS";
     stmt = conn.createStatement();
     rset = stmt.executeQuery(SELECT_QUERY);
@@ -88,28 +98,41 @@ class dbHandler {
 
     while (rset.next()) {
       cards.add(rset.getObject(1));
+      inStandardrotation.add(rset.getObject(2));
     }
 
   }
 
-  String nextCard() throws Exception {
+  String getnextCard() throws Exception {
     try {
+      cardIterator++;
       System.out.println(cards.get(cardIterator).toString());
     } catch (Exception ex) {
       cardIterator = 0;
       System.out.println(cards.get(cardIterator));
     }
-    return cards.get(cardIterator++).toString();
+    return cards.get(cardIterator).toString();
   }
 
-  String prevCard() throws Exception {
+  String getprevCard() throws Exception {
     try {
+      cardIterator--;
       System.out.println(cards.get(cardIterator).toString());
     } catch (Exception ex) {
       cardIterator = cards.size() - 1;
       System.out.println(cards.get(cardIterator));
     }
-    return cards.get(cardIterator--).toString();
+    return cards.get(cardIterator).toString();
   }
 
+  String getRandomCard() throws Exception {
+    try {
+      cardIterator = random.nextInt(cards.size());
+      //cardIterator = cards.indexOf(cards.get(cardIterator));
+      System.out.println(cards.get(cardIterator).toString());
+    } catch (Exception ex) {
+      cardIterator = random.nextInt(cards.size());
+    }
+    return cards.get(cardIterator).toString();
+  }
 }

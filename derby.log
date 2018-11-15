@@ -1,11 +1,11 @@
 ----------------------------------------------------------------
-Mon Nov 12 16:08:24 EST 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0167-09c1-071c-000006bf1040 
-on database directory C:\Users\Nicoc\Documents\COP3003\JavaFXTestDb\lib\MyDbTest with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
-Loaded from file:/C:/Users/Nicoc/Documents/COP3003/JavaFXTestDb/lib/derby.jar
+Wed Nov 14 22:30:21 EST 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0167-156b-6ebb-00000c81b558 
+on database directory D:\Pseudo Desktop\COP3003\JavaFXTDb\lib\MyDbTest with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+Loaded from file:/D:/Pseudo%20Desktop/COP3003/JavaFXTDb/lib/derby.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_181-b13
-user.dir=C:\Users\Nicoc\Documents\COP3003\JavaFXTestDb
+user.dir=D:\Pseudo Desktop\COP3003\JavaFXTDb
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
