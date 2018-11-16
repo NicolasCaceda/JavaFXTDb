@@ -8,6 +8,9 @@ import javafx.scene.image.Image;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
+/**
+ * Main file for the program that runs everything.
+ */
 public class Main extends Application {
 
   /**
