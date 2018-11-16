@@ -19,6 +19,7 @@ class DbHandler {
   private ArrayList cards = new ArrayList<String>();
   private ArrayList inStandardrotation = new ArrayList<Boolean>();
   private int cardIterator = 0;
+  private String selectQuery = null;
   private Random random = new Random();
 
 
@@ -40,9 +41,9 @@ class DbHandler {
   void getHunterSecrets() throws Exception {
     cards.clear();
     inStandardrotation.clear();
-    final String SELECT_QUERY = "SELECT * FROM HUNTERSECRETS";
+    selectQuery = "SELECT * FROM HUNTERSECRETS";
     stmt = conn.createStatement();
-    rset = stmt.executeQuery(SELECT_QUERY);
+    rset = stmt.executeQuery(selectQuery);
 
     while (rset.next()) {
       cards.add(rset.getObject(1));
@@ -53,9 +54,9 @@ class DbHandler {
   void getMageSecrets() throws Exception {
     cards.clear();
     inStandardrotation.clear();
-    final String SELECT_QUERY = "SELECT * FROM MAGESECRETS";
+    selectQuery = "SELECT * FROM MAGESECRETS";
     stmt = conn.createStatement();
-    rset = stmt.executeQuery(SELECT_QUERY);
+    rset = stmt.executeQuery(selectQuery);
 
     while (rset.next()) {
       cards.add(rset.getObject(1));
@@ -67,9 +68,9 @@ class DbHandler {
   void getPaladinSecrets() throws Exception {
     cards.clear();
     inStandardrotation.clear();
-    final String SELECT_QUERY = "SELECT * FROM PALADINSECRETS";
+    selectQuery = "SELECT * FROM PALADINSECRETS";
     stmt = conn.createStatement();
-    rset = stmt.executeQuery(SELECT_QUERY);
+    rset = stmt.executeQuery(selectQuery);
 
     while (rset.next()) {
       cards.add(rset.getObject(1));
@@ -81,9 +82,9 @@ class DbHandler {
   void getRogueSecrets() throws Exception {
     cards.clear();
     inStandardrotation.clear();
-    final String SELECT_QUERY = "SELECT * FROM ROGUESECRETS";
+    selectQuery = "SELECT * FROM ROGUESECRETS";
     stmt = conn.createStatement();
-    rset = stmt.executeQuery(SELECT_QUERY);
+    rset = stmt.executeQuery(selectQuery);
 
     while (rset.next()) {
       cards.add(rset.getObject(1));
