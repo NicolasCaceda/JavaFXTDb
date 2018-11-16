@@ -1,15 +1,13 @@
-package HSCode;
+package hscode;
 
-import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Random;
 
-class dbHandler {
+class DbHandler {
 
   //private static final String DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
   private static final String DATABASE_URL = "jdbc:derby:lib//MyDbTest";
@@ -18,15 +16,13 @@ class dbHandler {
   private Connection conn = null;
   private Statement stmt = null;
   private ResultSet rset = null;
-  private ResultSetMetaData rsetMeta = null;
-  private int columnNumber = 0;
   private ArrayList cards = new ArrayList<String>();
   private ArrayList inStandardrotation = new ArrayList<Boolean>();
   private int cardIterator = 0;
-  Random random = new Random();
+  private Random random = new Random();
 
 
-  dbHandler() {
+  DbHandler() {
     try {
 
       Class.forName(Driver);
@@ -35,6 +31,7 @@ class dbHandler {
     } catch (Exception e) {
 
       System.out.println("Error Making Connection");
+      System.out.println(e);
       System.out.println(e.getMessage());
 
     }
@@ -46,8 +43,6 @@ class dbHandler {
     final String SELECT_QUERY = "SELECT * FROM HUNTERSECRETS";
     stmt = conn.createStatement();
     rset = stmt.executeQuery(SELECT_QUERY);
-    rsetMeta = rset.getMetaData();
-    columnNumber = rsetMeta.getColumnCount();
 
     while (rset.next()) {
       cards.add(rset.getObject(1));
@@ -61,8 +56,6 @@ class dbHandler {
     final String SELECT_QUERY = "SELECT * FROM MAGESECRETS";
     stmt = conn.createStatement();
     rset = stmt.executeQuery(SELECT_QUERY);
-    rsetMeta = rset.getMetaData();
-    columnNumber = rsetMeta.getColumnCount();
 
     while (rset.next()) {
       cards.add(rset.getObject(1));
@@ -77,8 +70,6 @@ class dbHandler {
     final String SELECT_QUERY = "SELECT * FROM PALADINSECRETS";
     stmt = conn.createStatement();
     rset = stmt.executeQuery(SELECT_QUERY);
-    rsetMeta = rset.getMetaData();
-    columnNumber = rsetMeta.getColumnCount();
 
     while (rset.next()) {
       cards.add(rset.getObject(1));
@@ -93,8 +84,6 @@ class dbHandler {
     final String SELECT_QUERY = "SELECT * FROM ROGUESECRETS";
     stmt = conn.createStatement();
     rset = stmt.executeQuery(SELECT_QUERY);
-    rsetMeta = rset.getMetaData();
-    columnNumber = rsetMeta.getColumnCount();
 
     while (rset.next()) {
       cards.add(rset.getObject(1));
@@ -123,6 +112,15 @@ class dbHandler {
       System.out.println(cards.get(cardIterator));
     }
     return cards.get(cardIterator).toString();
+  }
+
+  String getStandard() throws Exception {
+    try {
+      System.out.println(inStandardrotation.get(cardIterator).toString());
+    } catch (Exception ex) {
+      System.out.println(inStandardrotation.get(cardIterator));
+    }
+    return inStandardrotation.get(cardIterator).toString();
   }
 
   String getRandomCard() throws Exception {

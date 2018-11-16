@@ -19,6 +19,12 @@
   -fx-border-color: #FFFFB6;
 }
 
+#StandardLabel{
+  -fx-font-family: OPTIBelwe-Medium;
+  -fx-text-fill: #503C1F;
+  -fx-font-weight: bold;
+}
+
 #MageClassButton {
   -fx-background-color: #5C6896;
   -fx-background-radius: 5,4,3,5;

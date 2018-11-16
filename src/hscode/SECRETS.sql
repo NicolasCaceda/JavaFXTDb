@@ -1,6 +1,4 @@
-/*
 DROP TABLE secrets;
- */
 DROP TABLE HunterSecrets;
 DROP TABLE MageSecrets;
 DROP TABLE PaladinSecrets;
@@ -86,9 +84,9 @@ VALUES
 
 INSERT INTO RogueSecrets(secretName, standard)
 VALUES
-       ('Cheat Death',        false ),
-       ('Sudden Betrayal',    false ),
-       ('Evasion',            false )
+       ('Cheat Death',        true ),
+       ('Sudden Betrayal',    true ),
+       ('Evasion',            true )
 ;
 
 
