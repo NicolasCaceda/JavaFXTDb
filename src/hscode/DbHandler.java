@@ -9,7 +9,6 @@ import java.util.Random;
 
 class DbHandler {
 
-  //private static final String DRIVER = "org.apache.derby.jdbc.EmbeddedDriver";
   private static final String DATABASE_URL = "jdbc:derby:lib//MyDbTest";
   private static final String Driver = "org.apache.derby.jdbc.EmbeddedDriver";
 
