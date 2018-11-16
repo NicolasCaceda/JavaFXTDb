@@ -7,6 +7,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * Manages everything database related.
+ */
 class DbHandler {
 
   private static final String DATABASE_URL = "jdbc:derby:lib//MyDbTest";
