@@ -1,6 +1,7 @@
 package HSCode;
 
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -25,36 +26,35 @@ public class Controller {
 
   @FXML
   private HBox Secret;
-  private Image secretImage = new Image("file:Images/Hearthstone-Logo.png", 200,
+  private Image secretImage = new Image("file:Resources/Images/Hearthstone-Logo.png", 200,
       200, true, true);
+
 
   @FXML
   public Button Jaina = new Button();
-  private Image jainaPortrait = new Image("file:Images/Portraits/Jaina.jpg", 65,
-      31, false, true);
+  private Image jainaPortrait = new Image("file:Resources/Images/Portraits/Jaina.jpg", 200,
+      200, false, true);
 
   @FXML
   public Button Uther;
-  private Image utherPortrait = new Image("file:Images/Portraits/Uther.jpg", 64.53125,
-      31, false, true);
+  private Image utherPortrait = new Image("file:Resources/Images/Portraits/Uther.jpg", 200,
+      200, false, true);
 
   @FXML
   public Button Rexxar;
-  private Image rexxarPortrait = new Image("file:Images/Portraits/Rexxar.jpg", 64.53125,
-      31, false, true);
+  private Image rexxarPortrait = new Image("file:Resources/Images/Portraits/Rexxar.jpg", 200,
+      200, false, true);
+
 
   @FXML
   public Button Valeera;
-  private Image valeeraPortrait = new Image("file:Images/Portraits/Valeera.jpg", 64.53125,
-      31, false, true);
+  private Image valeeraPortrait = new Image("file:Resources/Images/Portraits/Valeera.jpg", 200,
+      200, false, true);
 
   @FXML
   public void initialize() {
-    Jaina.setGraphic(new ImageView(jainaPortrait));
-    Uther.setGraphic(new ImageView(utherPortrait));
-    Rexxar.setGraphic(new ImageView(rexxarPortrait));
-    Valeera.setGraphic(new ImageView(valeeraPortrait));
     Secret.getChildren().add(new ImageView(secretImage));
+    Secret.setAlignment(Pos.CENTER);
     db = new dbHandler();
   }
 
@@ -98,7 +98,7 @@ public class Controller {
   void next() throws Exception {
     try {
       Secret.getChildren().clear();
-      Secret.getChildren().add(new ImageView(new Image("file:Images/Secrets/"
+      Secret.getChildren().add(new ImageView(new Image("file:Resources/Images/Secrets/"
           + db.getnextCard() + ".png", 200, 200, true, true)));
 
     } catch (Exception ex) {
@@ -110,7 +110,7 @@ public class Controller {
   void back() throws Exception {
     try {
       Secret.getChildren().clear();
-      Secret.getChildren().add(new ImageView(new Image("file:Images/Secrets/"
+      Secret.getChildren().add(new ImageView(new Image("file:Resources/Images/Secrets/"
           + db.getprevCard() + ".png", 200, 200, true, true)));
 
     } catch (Exception ex) {
@@ -120,13 +120,13 @@ public class Controller {
 
 
   @FXML
-  void randomSelection() throws Exception{
-    try{
+  void randomSelection() throws Exception {
+    try {
       Secret.getChildren().clear();
-      Secret.getChildren().add(new ImageView(new Image("file:Images/Secrets/"
+      Secret.getChildren().add(new ImageView(new Image("file:Resources/Images/Secrets/"
           + db.getRandomCard() + ".png", 200, 200, true, true)));
-    }catch(Exception ex){
-
+    } catch (Exception ex) {
+      noClassError();
     }
   }
 
