@@ -10,6 +10,9 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+  /**
+   * Starts the program
+   */
   @Override
   public void start(Stage primaryStage) throws Exception {
     primaryStage.setTitle("HearthStone Secrets");

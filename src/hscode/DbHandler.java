@@ -21,7 +21,9 @@ class DbHandler {
   private String selectQuery = null;
   private Random random = new Random();
 
-
+  /**
+   * Constructor for my database connection
+   */
   DbHandler() {
     try {
 
@@ -31,12 +33,16 @@ class DbHandler {
     } catch (Exception e) {
 
       System.out.println("Error Making Connection");
-      System.out.println(e);
       System.out.println(e.getMessage());
 
     }
   }
 
+  /**
+   * Gets the HunterSecrets table.
+   *
+   * @throws Exception in case there is no connection made.
+   */
   void getHunterSecrets() throws Exception {
     cards.clear();
     inStandardrotation.clear();
@@ -50,6 +56,11 @@ class DbHandler {
     }
   }
 
+  /**
+   * Gets the MageSecrets table.
+   *
+   * @throws Exception in case there is no connection made.
+   */
   void getMageSecrets() throws Exception {
     cards.clear();
     inStandardrotation.clear();
@@ -64,6 +75,11 @@ class DbHandler {
 
   }
 
+  /**
+   * Gets the PaladinSecrets table.
+   *
+   * @throws Exception in case there is no connection made.
+   */
   void getPaladinSecrets() throws Exception {
     cards.clear();
     inStandardrotation.clear();
@@ -78,6 +94,11 @@ class DbHandler {
 
   }
 
+  /**
+   * Gets the RogueSecrets table.
+   *
+   * @throws Exception in case there is no connection made.
+   */
   void getRogueSecrets() throws Exception {
     cards.clear();
     inStandardrotation.clear();
@@ -92,7 +113,12 @@ class DbHandler {
 
   }
 
-  String getnextCard() throws Exception {
+  /**
+   * Gets the next card in the current table.
+   *
+   * @return Card as a string
+   */
+  String getnextCard() {
     try {
       cardIterator++;
       System.out.println(cards.get(cardIterator).toString());
@@ -103,6 +129,11 @@ class DbHandler {
     return cards.get(cardIterator).toString();
   }
 
+  /**
+   * Gets the previous card in the current table.
+   *
+   * @return Card as a string
+   */
   String getprevCard() throws Exception {
     try {
       cardIterator--;
@@ -114,6 +145,11 @@ class DbHandler {
     return cards.get(cardIterator).toString();
   }
 
+  /**
+   * Gets whether or not the card is in standard.
+   *
+   * @return true or false as a string
+   */
   String getStandard() throws Exception {
     try {
       System.out.println(inStandardrotation.get(cardIterator).toString());
@@ -123,6 +159,11 @@ class DbHandler {
     return inStandardrotation.get(cardIterator).toString();
   }
 
+  /**
+   * Gets a random card in the current table.
+   *
+   * @return Card as a string
+   */
   String getRandomCard() throws Exception {
     try {
       cardIterator = random.nextInt(cards.size());
