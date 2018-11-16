@@ -15,14 +15,14 @@ class DbHandler {
   private Connection conn = null;
   private Statement stmt = null;
   private ResultSet rset = null;
-  private ArrayList cards = new ArrayList<String>();
-  private ArrayList inStandardrotation = new ArrayList<Boolean>();
+  private ArrayList<String> cards = new ArrayList<>();
+  private ArrayList<Boolean> inStandardrotation = new ArrayList<>();
   private int cardIterator = 0;
   private String selectQuery = null;
   private Random random = new Random();
 
   /**
-   * Constructor for my database connection
+   * Constructor for my database connection.
    */
   DbHandler() {
     try {
@@ -39,76 +39,80 @@ class DbHandler {
   }
 
   /**
-   * Gets the HunterSecrets table.
+   * Gets the HunterSecrets table and initializes to beginning of the list.
    *
    * @throws Exception in case there is no connection made.
    */
   void getHunterSecrets() throws Exception {
     cards.clear();
     inStandardrotation.clear();
+    cardIterator = -1;
     selectQuery = "SELECT * FROM HUNTERSECRETS";
     stmt = conn.createStatement();
     rset = stmt.executeQuery(selectQuery);
 
     while (rset.next()) {
-      cards.add(rset.getObject(1));
-      inStandardrotation.add(rset.getObject(2));
+      cards.add(rset.getObject(1).toString());
+      inStandardrotation.add(Boolean.valueOf(rset.getObject(2).toString()));
     }
   }
 
   /**
-   * Gets the MageSecrets table.
+   * Gets the MageSecrets table and initializes to beginning of the list.
    *
    * @throws Exception in case there is no connection made.
    */
   void getMageSecrets() throws Exception {
     cards.clear();
     inStandardrotation.clear();
+    cardIterator = -1;
     selectQuery = "SELECT * FROM MAGESECRETS";
     stmt = conn.createStatement();
     rset = stmt.executeQuery(selectQuery);
 
     while (rset.next()) {
-      cards.add(rset.getObject(1));
-      inStandardrotation.add(rset.getObject(2));
+      cards.add(rset.getObject(1).toString());
+      inStandardrotation.add(Boolean.valueOf(rset.getObject(2).toString()));
     }
 
   }
 
   /**
-   * Gets the PaladinSecrets table.
+   * Gets the PaladinSecrets table and initializes to beginning of the list.
    *
    * @throws Exception in case there is no connection made.
    */
   void getPaladinSecrets() throws Exception {
     cards.clear();
     inStandardrotation.clear();
+    cardIterator = -1;
     selectQuery = "SELECT * FROM PALADINSECRETS";
     stmt = conn.createStatement();
     rset = stmt.executeQuery(selectQuery);
 
     while (rset.next()) {
-      cards.add(rset.getObject(1));
-      inStandardrotation.add(rset.getObject(2));
+      cards.add(rset.getObject(1).toString());
+      inStandardrotation.add(Boolean.valueOf(rset.getObject(2).toString()));
     }
 
   }
 
   /**
-   * Gets the RogueSecrets table.
+   * Gets the RogueSecrets table and initializes to beginning of the list.
    *
    * @throws Exception in case there is no connection made.
    */
   void getRogueSecrets() throws Exception {
     cards.clear();
     inStandardrotation.clear();
+    cardIterator = -1;
     selectQuery = "SELECT * FROM ROGUESECRETS";
     stmt = conn.createStatement();
     rset = stmt.executeQuery(selectQuery);
 
     while (rset.next()) {
-      cards.add(rset.getObject(1));
-      inStandardrotation.add(rset.getObject(2));
+      cards.add(rset.getObject(1).toString());
+      inStandardrotation.add(Boolean.valueOf(rset.getObject(2).toString()));
     }
 
   }
@@ -121,12 +125,12 @@ class DbHandler {
   String getnextCard() {
     try {
       cardIterator++;
-      System.out.println(cards.get(cardIterator).toString());
+      System.out.println(cards.get(cardIterator));
     } catch (Exception ex) {
       cardIterator = 0;
       System.out.println(cards.get(cardIterator));
     }
-    return cards.get(cardIterator).toString();
+    return cards.get(cardIterator);
   }
 
   /**
@@ -134,15 +138,15 @@ class DbHandler {
    *
    * @return Card as a string
    */
-  String getprevCard() throws Exception {
+  String getprevCard() {
     try {
       cardIterator--;
-      System.out.println(cards.get(cardIterator).toString());
+      System.out.println(cards.get(cardIterator));
     } catch (Exception ex) {
       cardIterator = cards.size() - 1;
       System.out.println(cards.get(cardIterator));
     }
-    return cards.get(cardIterator).toString();
+    return cards.get(cardIterator);
   }
 
   /**
@@ -150,7 +154,7 @@ class DbHandler {
    *
    * @return true or false as a string
    */
-  String getStandard() throws Exception {
+  String getStandard() {
     try {
       System.out.println(inStandardrotation.get(cardIterator).toString());
     } catch (Exception ex) {
@@ -164,14 +168,13 @@ class DbHandler {
    *
    * @return Card as a string
    */
-  String getRandomCard() throws Exception {
+  String getRandomCard() {
     try {
       cardIterator = random.nextInt(cards.size());
-      //cardIterator = cards.indexOf(cards.get(cardIterator));
-      System.out.println(cards.get(cardIterator).toString());
+      System.out.println(cards.get(cardIterator));
     } catch (Exception ex) {
       cardIterator = random.nextInt(cards.size());
     }
-    return cards.get(cardIterator).toString();
+    return cards.get(cardIterator);
   }
 }

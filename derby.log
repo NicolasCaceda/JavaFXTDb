@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Fri Nov 16 12:00:11 EST 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0167-1d77-37a6-00000c389f60 
+Fri Nov 16 12:25:25 EST 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0167-1d8e-5237-00000c388230 
 on database directory D:\Pseudo Desktop\COP3003\JavaFXTDb\lib\MyDbTest with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
 Loaded from file:/D:/Pseudo%20Desktop/COP3003/JavaFXTDb/lib/derby.jar
 java.vendor=Oracle Corporation

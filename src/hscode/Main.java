@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
   /**
-   * Starts the program
+   * Initializes the program.
    */
   @Override
   public void start(Stage primaryStage) throws Exception {
@@ -26,7 +26,10 @@ public class Main extends Application {
     primaryStage.show();
   }
 
-  public static void main(String[] args) throws Exception {
+  /**
+   * Starts the program.
+   */
+  public static void main(String[] args){
     launch(args);
   }
 }
