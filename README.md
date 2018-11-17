@@ -12,5 +12,5 @@ The program is aesthetically pleasing as it uses similar colors as located in th
 
 
 ## Course Req
-#### Database UML
+#### Database Diagram 
 ![](MyDbTest.png)
