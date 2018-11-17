@@ -1,25 +1,26 @@
-#Background{
+#Background {
   -fx-background-color: #AD825F;
 }
 
-#MenuButton{
+#MenuButton {
   -fx-font-family: OPTIBelwe-Medium;
   -fx-text-fill: #503C1F;
   -fx-font-weight: bold;
+  -fx-font-size: 12;
   -fx-background-color: #E7C7AD;
-  -fx-background-radius: 5,4,3,5;
-  -fx-background-insets: 0,1,2,0;
+  -fx-background-radius: 5, 4, 3, 5;
+  -fx-background-insets: 0, 1, 2, 0;
   -fx-border-color: #F0C564;
-  -fx-border-radius: 5,4,3,5;
-  -fx-border-width:2;
+  -fx-border-radius: 5, 4, 3, 5;
+  -fx-border-width: 2;
 }
 
-#MenuButton:hover{
+#MenuButton:hover {
   -fx-background-color: #FFFFE9;
   -fx-border-color: #FFFFB6;
 }
 
-#StandardLabel{
+#StandardLabel {
   -fx-font-family: OPTIBelwe-Medium;
   -fx-text-fill: #503C1F;
   -fx-font-weight: bold;
@@ -27,60 +28,67 @@
 
 #MageClassButton {
   -fx-background-color: #5C6896;
-  -fx-background-radius: 5,4,3,5;
-  -fx-background-insets: 0,1,2,0;
-  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+  -fx-background-radius: 5, 4, 3, 5;
+  -fx-background-insets: 0, 1, 2, 0;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
 
   -fx-font-family: OPTIBelwe-Medium;
   -fx-text-fill: FFFFFF;
   -fx-font-weight: bold;
+  -fx-font-size: 12;
 }
 
-#MageClassButton:hover{
-  -fx-effect: dropshadow( three-pass-box , #928f8a, 5, 0.0 , 0 , 1 );
+#MageClassButton:hover {
+  -fx-effect: dropshadow(three-pass-box, #928f8a, 5, 0.0, 0, 1);
 }
 
 #PaladinClassButton {
   -fx-background-color: #AB692E;
-  -fx-background-radius: 5,4,3,5;
-  -fx-background-insets: 0,1,2,0;
-  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+  -fx-background-radius: 5, 4, 3, 5;
+  -fx-background-insets: 0, 1, 2, 0;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
 
   -fx-font-family: OPTIBelwe-Medium;
   -fx-text-fill: #FFFFFF;
   -fx-font-weight: bold;
+  -fx-font-size: 12;
+
 }
 
-#PaladinClassButton:hover{
-  -fx-effect: dropshadow( three-pass-box , #928f8a, 5, 0.0 , 0 , 1 );
+#PaladinClassButton:hover {
+  -fx-effect: dropshadow(three-pass-box, #928f8a, 5, 0.0, 0, 1);
 }
 
 #HunterClassButton {
   -fx-background-color: #246121;
-  -fx-background-radius: 5,4,3,5;
-  -fx-background-insets: 0,1,2,0;
-  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+  -fx-background-radius: 5, 4, 3, 5;
+  -fx-background-insets: 0, 1, 2, 0;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
 
   -fx-font-family: OPTIBelwe-Medium;
   -fx-text-fill: #FFFFFF;
   -fx-font-weight: bold;
+  -fx-font-size: 12;
+
 }
 
-#HunterClassButton:hover{
-  -fx-effect: dropshadow( three-pass-box , #928f8a, 5, 0.0 , 0 , 1 );
+#HunterClassButton:hover {
+  -fx-effect: dropshadow(three-pass-box, #928f8a, 5, 0.0, 0, 1);
 }
 
 #RogueClassButton {
   -fx-background-color: #37383C;
-  -fx-background-radius: 5,4,3,5;
-  -fx-background-insets: 0,1,2,0;
-  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+  -fx-background-radius: 5, 4, 3, 5;
+  -fx-background-insets: 0, 1, 2, 0;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
 
   -fx-font-family: OPTIBelwe-Medium;
   -fx-text-fill: #FFFFFF;
   -fx-font-weight: bold;
+  -fx-font-size: 12;
+
 }
 
-#RogueClassButton:hover{
-  -fx-effect: dropshadow( three-pass-box , #928f8a, 5, 0.0 , 0 , 1 );
+#RogueClassButton:hover {
+  -fx-effect: dropshadow(three-pass-box, #928f8a, 5, 0.0, 0, 1);
 }

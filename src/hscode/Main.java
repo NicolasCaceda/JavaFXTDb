@@ -21,7 +21,7 @@ public class Main extends Application {
     primaryStage.setTitle("HearthStone Secrets");
     primaryStage.getIcons().add(new Image("file:src/Resources/Images/Hearthstone-Logo.png"));
     Font.loadFont(getClass().getResourceAsStream(
-        "file:src/Resources/Font/OPTIBelwe-Medium.otf"), 14);
+        "file:src/Resources/Font/OPTIBelwe-Medium.otf"), 12);
     primaryStage.setResizable(false);
     Parent root = FXMLLoader.load(getClass().getResource("Secrets.fxml"));
     Scene scene = new Scene(root, 425, 300);
