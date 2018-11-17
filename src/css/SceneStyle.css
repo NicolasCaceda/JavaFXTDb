@@ -20,10 +20,18 @@
   -fx-border-color: #FFFFB6;
 }
 
+#MenuButton:pressed{
+  -fx-background-color: #FFFFE9;
+  -fx-border-color: #FFFFB6;
+  -fx-background-radius: 7, 6, 5, 7;
+  -fx-background-insets: 0, 1, 2, 0;
+}
+
 #StandardLabel {
   -fx-font-family: OPTIBelwe-Medium;
   -fx-text-fill: #503C1F;
   -fx-font-weight: bold;
+  -fx-font-size: 12;
 }
 
 #MageClassButton {
@@ -39,6 +47,12 @@
 }
 
 #MageClassButton:hover {
+  -fx-effect: dropshadow(three-pass-box, #928f8a, 5, 0.0, 0, 1);
+}
+
+#MageClassButton:pressed {
+  -fx-background-radius: 7, 6, 5, 7;
+  -fx-background-insets: 0, 1, 2, 0;
   -fx-effect: dropshadow(three-pass-box, #928f8a, 5, 0.0, 0, 1);
 }
 
@@ -59,6 +73,12 @@
   -fx-effect: dropshadow(three-pass-box, #928f8a, 5, 0.0, 0, 1);
 }
 
+#PaladinClassButton:pressed {
+  -fx-background-radius: 7, 6, 5, 7;
+  -fx-background-insets: 0, 1, 2, 0;
+  -fx-effect: dropshadow(three-pass-box, #928f8a, 5, 0.0, 0, 1);
+}
+
 #HunterClassButton {
   -fx-background-color: #246121;
   -fx-background-radius: 5, 4, 3, 5;
@@ -76,6 +96,12 @@
   -fx-effect: dropshadow(three-pass-box, #928f8a, 5, 0.0, 0, 1);
 }
 
+#HunterClassButton:pressed {
+  -fx-background-radius: 7, 6, 5, 7;
+  -fx-background-insets: 0, 1, 2, 0;
+  -fx-effect: dropshadow(three-pass-box, #928f8a, 5, 0.0, 0, 1);
+}
+
 #RogueClassButton {
   -fx-background-color: #37383C;
   -fx-background-radius: 5, 4, 3, 5;
@@ -90,5 +116,11 @@
 }
 
 #RogueClassButton:hover {
+  -fx-effect: dropshadow(three-pass-box, #928f8a, 5, 0.0, 0, 1);
+}
+
+#RogueClassButton:pressed {
+  -fx-background-radius: 7, 6, 5, 7;
+  -fx-background-insets: 0, 1, 2, 0;
   -fx-effect: dropshadow(three-pass-box, #928f8a, 5, 0.0, 0, 1);
 }
