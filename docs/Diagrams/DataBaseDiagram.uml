@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>81513377-2eed-4ae7-88a0-c2d63231dc25.SCHEMA:APP</OriginalElement>
+  <nodes>
+    <node x="0.0" y="0.0">81513377-2eed-4ae7-88a0-c2d63231dc25.TABLE:APP.ROGUESECRETS</node>
+    <node x="237.0" y="0.0">81513377-2eed-4ae7-88a0-c2d63231dc25.TABLE:APP.MAGESECRETS</node>
+    <node x="0.0" y="119.0">81513377-2eed-4ae7-88a0-c2d63231dc25.TABLE:APP.PALADINSECRETS</node>
+    <node x="237.0" y="119.0">81513377-2eed-4ae7-88a0-c2d63231dc25.TABLE:APP.HUNTERSECRETS</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="214.5" y="7.0" />
+  <SelectedNodes>
+    <node>81513377-2eed-4ae7-88a0-c2d63231dc25.TABLE:APP.ROGUESECRETS</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+  </Categories>
+</Diagram>
+

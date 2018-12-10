@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="177.0" y="191.451171875">css</node>
+    <node x="30.0" y="13.451171875">hscode</node>
+    <node x="0.0" y="117.451171875">META-INF</node>
+    <node x="0.0" y="191.451171875">Resources</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="hscode" target="hscode">
+      <point x="29.0" y="14.5" />
+      <point x="117.0" y="72.451171875" />
+      <point x="0.0" y="72.451171875" />
+      <point x="0.0" y="20.701171875" />
+      <point x="-58.0" y="-7.25" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="232.0" y="217.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>Project Files</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
