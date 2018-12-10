@@ -33,6 +33,7 @@ public class Main extends Application {
 
   /**
    * Starts the program.
+   * @param args The usual params for main.
    */
   public static void main(String[] args) {
     launch(args);
