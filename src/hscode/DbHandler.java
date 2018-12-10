@@ -1,3 +1,5 @@
+//Nicolas Caceda
+
 package hscode;
 
 import java.sql.Connection;
@@ -9,6 +11,7 @@ import java.util.Random;
 
 /**
  * Manages everything database related.
+ * It manages the connection, queries through 4 different tables, and keeps track of where it is.
  */
 class DbHandler {
 

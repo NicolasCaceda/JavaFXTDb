@@ -1,3 +1,6 @@
+/* Nicolas Caceda
+This was used to keep track of what I was putting into the database
+*/
 DROP TABLE secrets;
 DROP TABLE HunterSecrets;
 DROP TABLE MageSecrets;
